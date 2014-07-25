@@ -91,7 +91,7 @@ else { ?>
 <div id="tripal_feature_details" class="tripal_details">
 
    <!-- Basic Details Theme -->
-   <?php print theme('tripal_feature_base', $node); ?>
+   <?php print theme('tripal_feature_base',$node); ?>
 
    <!-- Database References -->
    <?php print theme('tripal_feature_references', $node); ?>
@@ -119,9 +119,6 @@ else { ?>
    {
       print theme('tripal_feature_sequence', $node); 
    } ?>
- 
-   <!-- Proteins --> <?php
-   print theme('tripal_feature_proteins', $node); ?>
 
    <!-- Formatted Sequences -->
    <?php print theme('tripal_feature_featureloc_sequences', $node); ?>
@@ -166,7 +163,8 @@ else { ?>
        }
      }?>
      
-     <?php // ADD CUSTOMIZED <li> LINKS HERE ?>
+      <!-- #DAMIENGENESTE -->
+	  <li><a href="https://192.168.56.101:8080/cgi-bin/nph-blast.pl?feature_id=<?php print $feature->feature_id?>"  target="_blank">BLAST </a></l>
    </ul>
 </div>
 
