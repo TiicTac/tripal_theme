@@ -100,11 +100,12 @@ if(count($alignments) > 0){ ?>
               elseif ($alignment->right_strand == 1) {
                    $rstrand = '+';
               }
-              print $feature->name .":". ($alignment->fmin + 1) . ".." . $alignment->fmax . " " . $strand; 
+	      //#DAMIENGENESTE add +1 for a good display
+              print $feature->name .":". ($alignment->fmin + 1) . ".." . $alignment->fmax +1 . " " . $strand; 
               print "<br>" . $alignment->name .":". ($alignment->right_fmin + 1) . ".." . $alignment->right_fmax . " " . $rstrand; 
             }
             else {
-              print $alignment->name .":". ($alignment->fmin + 1) . ".." . $alignment->fmax . " " . $strand; 
+              print $alignment->name .":". ($alignment->fmin + 1) . ".." . $alignment->fmax +1 . " " . $strand; 
             }?>
           </td>
         </tr> <?php
