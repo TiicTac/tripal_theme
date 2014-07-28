@@ -20,7 +20,10 @@
 //       print_r $node line below or install the Drupal Devel module which 
 //       provides an extra tab at the top of the node page labelled Devel
 
+$blasturl = 'https://192.168.56.102:8088/blast/cgi-bin/nph-blast.pl?o=C&feature_id=';
 drupal_add_css('./tripal-node-templates.css');
+
+
 $feature  = $variables['node']->feature;
 
 // get the template settings
@@ -164,7 +167,7 @@ else { ?>
      }?>
      
       <!-- #DAMIENGENESTE -->
-	  <li><a href="https://192.168.56.101:8080/cgi-bin/nph-blast.pl?feature_id=<?php print $feature->feature_id?>"  target="_blank">BLAST </a></l>
+	  <li><a href="<?php print $blasturl.$feature->feature_id?>"  target="_blank">BLAST </a></l>
    </ul>
 </div>
 
